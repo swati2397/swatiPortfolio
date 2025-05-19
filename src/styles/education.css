@@ -1,0 +1,155 @@
+
+#education {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(185, 253, 253, 0.778);
+  border-radius: 10px;
+  background: rgba(185, 253, 253, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.image-container,
+.text-container {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  -webkit-transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  -moz-transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  -ms-transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  -o-transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+}
+
+.text-container {
+  transform: translateX(100px);
+}
+
+.image-container.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.text-container.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 300px;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.9));
+  -webkit-filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.9));
+}
+
+.text-container {
+  text-align: left;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.text-container a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #20B2AA;
+  /* padding: 5px 5px; */
+
+  padding: 10px 15px;
+
+  font-weight: bold;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+
+  display: inline-block;
+
+}
+
+.text-container a:hover {
+  background-color: #00FFFF;
+  color: #000;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .education-section {
+    grid-template-columns: 1fr;
+    width: 95%;
+    padding: 30px;
+  }
+  .image-container {
+    order: -1;
+    text-align: center;
+  }
+  .text-container {
+    text-align: center;
+  }
+  .image-container img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-section {
+    width: 95%;
+    padding: 20px;
+  }
+  .image-container {
+    order: -1;
+    text-align: center;
+  }
+  .text-container {
+    text-align: center;
+  }
+  .image-container img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section {
+    width: 100%;
+    padding: 15px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-container {
+    order: -1;
+    text-align: center;
+  }
+  .education-section p {
+    font-size: 16px;
+  }
+  .education-section p:first-child {
+    font-size: 24px;
+  }
+  .text-container a {
+    padding: 8px 12px;
+  }
+  .image-container img {
+    max-width: 150px;
+  }
+}
