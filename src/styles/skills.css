@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .skills-container {
   height: 100vh;
   max-width: 1500px;
@@ -140,3 +141,147 @@ h2 {
 }
 
 
+=======
+.skills-container {
+  height: 100vh;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+
+.skill-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-percentage {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Adjust as needed */
+  color: cyan;
+}
+
+.progress-circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, cyan, black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(cyan var(--progress), black var(--progress));
+  mask: radial-gradient(closest-side, transparent 55%, black);
+  -webkit-mask: radial-gradient(closest-side, transparent 55%, black);
+  transition: background 50s linear;
+  -webkit-transition: background 50s linear;
+  -moz-transition: background 50s linear;
+  -ms-transition: background 50s linear;
+  -o-transition: background 50s linear;
+}
+
+.inner-circle {
+  width: 80%;
+  height: 80%;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+
+  .skill-name {
+    font-size: 0.8rem;
+  }
+  .progress-circle {
+    width: 120px;
+    height: 120px;
+  }
+  .large-circle {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  .skill-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-name {
+    font-size: 11px;
+  }
+
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .large-circle {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .skill-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill-name {
+    font-size: 10px;
+  }
+  .progress-circle {
+    width: 90px;
+    height: 90px;
+  }
+  .large-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+>>>>>>> 38801625133ffe4fd4aa246278d75126d4843249
